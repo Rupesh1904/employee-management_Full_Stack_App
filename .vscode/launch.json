@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringBootBackendApplication<SpringBootBackend>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "Employee.Management.SpringBootBackend.SpringBootBackendApplication",
+            "projectName": "SpringBootBackend",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
