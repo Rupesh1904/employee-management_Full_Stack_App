@@ -3,7 +3,6 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import EmployeeService from '../Service/EmployeeService';
 
 
-
 const AddEmployeeComponent = () => {
     const [firstName, setFirstName]=useState('');
     const [lastName, setLastName]=useState('');
@@ -26,9 +25,9 @@ const AddEmployeeComponent = () => {
         }
         else{
             e.preventDefault();
-          
             EmployeeService.createEmployee(employee).then((response)=>{
                 console.log(response.data);
+                
     
             }).catch(error=>{
                 console.log(error);
@@ -38,7 +37,7 @@ const AddEmployeeComponent = () => {
 
     }
     useEffect(()=> {
-            
+
         EmployeeService.getEmployeeById(id).then((response)=>{
             setFirstName(response.data.firstName)
             setLastName(response.setLastName)
@@ -114,7 +113,6 @@ const AddEmployeeComponent = () => {
         </div>
 
         </div>
-       
     </div>
   )
 }
