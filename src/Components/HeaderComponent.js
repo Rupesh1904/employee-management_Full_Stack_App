@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const HeaderComponent = () => {
   return (
@@ -6,9 +7,9 @@ const HeaderComponent = () => {
         <header>
             <nav className='navbar navbar-expand-md navbar-dark bg-dark'>
                 <div>
-                   <a href='https://github.com/Rupesh1904' className='navbar-brand'>
+                   <Link to="/employees" className='navbar-brand'>
                     Employee Management App
-                   </a>
+                   </Link>
                 </div>
 
             </nav>

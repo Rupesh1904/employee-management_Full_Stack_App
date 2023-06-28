@@ -16,6 +16,7 @@ const AddEmployeeComponent = () => {
         if(id){
             EmployeeService.updateEmployee(id, employee).then((response)=>{
                 console.log(response.data)
+                
 
             }).catch(error=>{
                 console.log(error)
