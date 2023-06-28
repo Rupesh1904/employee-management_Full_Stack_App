@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import EmployeeService from '../Service/EmployeeService';
 
 
@@ -8,7 +8,7 @@ const AddEmployeeComponent = () => {
     const [lastName, setLastName]=useState('');
     const [emailId, seteEmailId]=useState('');
     const {id}=useParams();
-    const navigate= useNavigate();
+   
 
     const saveOrUpdateEmployee=(e)=>{
         const employee={firstName,lastName,emailId}
@@ -16,7 +16,6 @@ const AddEmployeeComponent = () => {
         if(id){
             EmployeeService.updateEmployee(id, employee).then((response)=>{
                 console.log(response.data)
-                navigate("/employees")
 
             }).catch(error=>{
                 console.log(error)
@@ -106,7 +105,8 @@ const AddEmployeeComponent = () => {
                                 </input>
                             </div>
                             <button className='btn btn-success' onClick={(e)=>saveOrUpdateEmployee(e)}>Save</button>
-                            <Link to="/employees" className='btn btn-danger'>Cancel</Link>
+                            <Link to="/employees" className='btn btn-danger m-2'>Cancel</Link>
+                            <Link to="/employees" className='btn btn-danger m-2'>List of Employees</Link>
                     </form>
                 </div>
             </div>
